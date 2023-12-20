@@ -3,6 +3,6 @@ kind: ConfigMap
 metadate:
   name: course-config
 data:
-  courec: devops
+  course: devops
   cloud: AWS
   duration: 100hr
