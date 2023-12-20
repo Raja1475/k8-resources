@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadate:
+  name: course-config
+data:
+  courec: devops
+  cloud: AWS
+  duration: 100hr
