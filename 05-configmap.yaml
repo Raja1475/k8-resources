@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cource-config
+data:
+  databasu_url: "jdbc:mysql://db-server:3306/mydatabase"
+  API_Key: "your-api-key"
+  api-server-ip: "192.168.1.100"
