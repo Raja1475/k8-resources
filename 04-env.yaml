@@ -3,8 +3,8 @@ kind: Pod
 metadata:
   name: nginx-with-env
   namespace: roboshop
-labels:
-  department: production
+  labels:
+    department: production
 spec:
   containers:
     - name: nginx-env
