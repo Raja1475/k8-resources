@@ -3,12 +3,12 @@ kind: Pod
 metadata:
   name: nginx-pod
   namespace: roboshop
-  labeles:
+  labels:
     env: production
     project: roboshop
   
 spec:
-  container:
+  containers:
     - name: nginx-prod
       image: nginx:latest
       ports:
