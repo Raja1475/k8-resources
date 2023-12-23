@@ -4,7 +4,7 @@ metadata:
   name: simple-nginx
   namespace: roboshop
   labels:
-    - name: simple-project
+    name: simple-project
 
 spec:
   containers:
