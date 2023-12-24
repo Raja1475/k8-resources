@@ -8,5 +8,5 @@ spec:
     - name: nginx1
       image: nginx:latest
       envFrom:
-        configMapRef:
-          name: cource-config
+        - configMapRef:
+            name: cource-config
