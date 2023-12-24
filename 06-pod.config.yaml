@@ -16,7 +16,7 @@ metadata:
           requests:
             cpu: "100m"
             memory: "256Mi"
-          limites:
+          limits:
             cpu: "200m"
             memory: "512Mi"
         env:
