@@ -4,8 +4,8 @@ metadata:
   name: sample-nginx-configmap
   namespace: roboshop
   labels:
-    production: yes
-    team: testing
+    production: "yes"
+    team: "testing"
   spec:
     containers:
       - name: nginx
