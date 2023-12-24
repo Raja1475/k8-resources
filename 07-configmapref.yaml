@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: configmapRef-pod
+  name: configmapref-pod
   namespace: roboshop
 spec:
   containers:
