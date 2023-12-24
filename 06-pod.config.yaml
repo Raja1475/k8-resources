@@ -12,7 +12,7 @@ spec:
         image: nginx:alpine
         ports:
           - containerPort: 80
-            name: http-web-services
+            name: http-web-srv
         resources:
           requests:
             cpu: "100m"
@@ -44,4 +44,4 @@ spec:
   ports:
     - name: service-port
       port: 80
-      targetPort: http-web-services
+      targetPort: http-web-srv
