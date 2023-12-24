@@ -1,0 +1,12 @@
+apiVersion: v1
+type: Pod
+matadata:
+  name: configMapRef-pod
+  namespace: roboshop
+spec:
+  containers:
+    - name: nginx1
+      image: nginx:latest
+      envFrom:
+        configMapRef:
+          name: cource-config
