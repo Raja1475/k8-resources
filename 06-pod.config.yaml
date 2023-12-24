@@ -12,6 +12,7 @@ spec:
         image: nginx:alpine
         ports:
           - containerPort: 80
+            name: http-web-services
         resources:
           requests:
             cpu: "100m"
@@ -30,3 +31,17 @@ spec:
               configMapKeyRef:
                 name: cource-config
                 key: api-server-ip
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-pod
+spec:
+  selector:
+    production: "yes"
+    team: "testing"
+ports:
+  - name: service-port
+    ports: 80
+    targetPort: http-web-services
