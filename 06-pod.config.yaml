@@ -41,7 +41,7 @@ spec:
   selector:
     production: "yes"
     team: "testing"
-ports:
-  - name: service-port
-    ports: 80
-    targetPort: http-web-services
+  ports:
+    - name: service-port
+      ports: 80
+      targetPort: http-web-services
