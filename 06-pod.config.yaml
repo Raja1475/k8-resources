@@ -43,5 +43,5 @@ spec:
     team: "testing"
   ports:
     - name: service-port
-      ports: 80
+      port: 80
       targetPort: http-web-services
