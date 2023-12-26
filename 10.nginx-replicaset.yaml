@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: nginx-frontend
-          image: nginx:latest
+          image: nginx:1.25.3
           ports:
           - containerPort: 80  
