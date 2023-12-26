@@ -16,7 +16,7 @@ spec:
         app: nginx
     spec:
       containers:
-        name: nginx-frontend
-        imeage: nginx:latest
-        ports:
+        - name: nginx-frontend
+          imeage: nginx:latest
+          ports:
         - containerPort: 80  
