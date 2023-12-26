@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: ReplicaSet
-matadata:
+metadata:
   name: frontend-replica
   labels:
     app: nginx-replica
