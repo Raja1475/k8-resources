@@ -29,7 +29,6 @@ metadata:
 spec:
   type: NodePort
   selector:
-    labels:
       team: "testing"
   ports:
     - protocol: TCP
