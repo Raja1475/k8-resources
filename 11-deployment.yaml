@@ -14,7 +14,8 @@ spec:
       labels:
         app: nginx
     spec:
-      name: nginx-deployment
-      image: nginx:latest
-      ports:
-        - containerPort: 80
+      containers:
+        - name: nginx-deployment
+          image: nginx:latest
+          ports:
+          - containerPort: 80
