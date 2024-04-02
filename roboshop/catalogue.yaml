@@ -19,10 +19,10 @@ spec:
         app: catalogue
         tier: app
         project: roboshop
-  spec:
-    containers:
-    - name: catalogue
-      image: joindevops/catalogue:1.0.0
+    spec:
+      containers:
+      - name: catalogue
+        image: joindevops/catalogue:1.0.0
       
 ---
 apiVersion: v1
