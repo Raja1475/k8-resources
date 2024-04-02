@@ -4,17 +4,20 @@ metadata:
   name: mongodb
   namespace: roboshop
   labels:
+    app: mongodb
     tier: db
     project: roboshop
 spec:
   replicas: 1
   selector:
     matchLabels:
+      app: mongodb
       tier: db
       project: roboshop
   template:
     metadata:
       labels:
+        app: mongodb
         tier: db
         project: roboshop
     spec:
@@ -29,6 +32,7 @@ metadata:
   namespace: roboshop
 spec:
   selector:
+    app: mongodb
     tier: db
     project: roboshop
   ports:
