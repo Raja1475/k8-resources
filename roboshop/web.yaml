@@ -108,9 +108,10 @@ metadata:
 spec:
   replicas: 1
   selector:
-    tier: web
-    app: web
-    project: roboshop
+    matchLabels:
+      tier: web
+      app: web
+      project: roboshop
   template:
     metadata:
       labels:
