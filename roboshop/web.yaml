@@ -142,14 +142,14 @@ metadata:
   name: web
   namespace: roboshop
 spec:
-selector:
-  tier: web
-  app: web
-  project: roboshop
-ports:
-- protocol: TCP
-  port: 80
-  targetPort: 80
-type: LoadBalancer
+  selector:
+    tier: web
+    app: web
+    project: roboshop
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: LoadBalancer
 
 
