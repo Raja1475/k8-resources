@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: roboshop
   name: user
-  labels:
-    tier: app
+  namespace: roboshop
+  labels: # these labels belong to deployment
     app: user
+    tier: app
     project: roboshop
 spec:
   replicas: 1
   selector:
-    matchLabels:
-      tier: app
+    matchLabels: # these labels should match with pod
       app: user
+      tier: app
       project: roboshop
-  template:
+  template: # this is the pod definition
     metadata:
       labels:
-        tier: app
         app: user
+        tier: app
         project: roboshop
     spec:
       containers:
@@ -27,7 +27,6 @@ spec:
         envFrom:
         - configMapRef:
             name: user
-
 ---
 apiVersion: v1
 kind: Service
@@ -36,21 +35,21 @@ metadata:
   namespace: roboshop
 spec:
   selector:
-    tier: app
     app: user
+    tier: app
     project: roboshop
   ports:
-  - protocol: TCP
-    port: 8080
-    targetPort: 8080
-
+  - name: mongodb-port
+    protocol: TCP
+    port: 8080 # this port belongs to service
+    targetPort: 8080 # this port belongs to container
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  namespace: roboshop
   name: user
+  namespace: roboshop
 data:
-  MONGO: "true"
+  MONGO: "true" # keep true in double quotes
+  MONGO_URL: "mongodb://mongodb:27017/user"  # protocol//service-name:service-port/schema
   REDIS_HOST: "redis"
-  MONGO_URL: "mongodb://mongodb:27017/user"
