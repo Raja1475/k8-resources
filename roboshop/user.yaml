@@ -1,6 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: roboshop
   name: user
   labels:
     tier: app
@@ -29,6 +30,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: user
+  namespace: roboshop
 spec:
   selector:
     tier: app
@@ -43,8 +45,9 @@ spec:
 apiVersion: v1
 kind: ConfigMap
 metadata:
+  namespace: roboshop
   name: user
 data:
-  MONGO: true
+  MONGO: "true"
   REDIS_HOST: "redis"
   MONGO_URL: "mongodb://mongodb:27017/users"
