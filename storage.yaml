@@ -61,6 +61,6 @@ spec:
           name: filebeat-config
           items:
             - key: filebeat.yml
-              path: filebeat.ym
+              path: filebeat.yml
       - name: nginx-logs
         emptyDir: {}
