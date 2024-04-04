@@ -57,10 +57,10 @@ spec:
       
       volumes:
       - name: filebeat-config
-          configMap:
-            name: filebeat-config
-            items:
-              - key: filebeat.yml
-                path: filebeat.ym
+        configMap:
+          name: filebeat-config
+          items:
+            - key: filebeat.yml
+              path: filebeat.ym
       - name: nginx-logs
         emptyDir: {}
