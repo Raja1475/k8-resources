@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: DemonSet
+metadata:
+  name: demon-fluntd
+  labels:
+    version: v1
+    description: shipping-logs
+spec:
+  selector:
+    matchLabels:
+      version: v1
+      description: shipping-logs
+  template:
+    metadata:
+      labels:
+        version: v1
+        description: shipping-logs
+    spec:
+      containers:
+        name: fluentd
+        image: quay.io/fluentd_elasticsearch/fluentd:v2.5.2
+        volumeMounts:
+        - name: hostpath
+          mountPath: /var/log
+      volumes:
+      - name: hostpath
+        path: /
