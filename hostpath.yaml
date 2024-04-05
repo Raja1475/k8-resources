@@ -1,7 +1,8 @@
 apiVersion: apps/v1
-kind: DemonSet
+kind: DaemonSet
 metadata:
   name: demon-fluntd
+  namespace: kube-system
   labels:
     version: v1
     description: shipping-logs
