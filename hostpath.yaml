@@ -18,11 +18,11 @@ spec:
         description: shipping-logs
     spec:
       containers:
-        name: fluentd
+      - name: fluentd
         image: quay.io/fluentd_elasticsearch/fluentd:v2.5.2
         volumeMounts:
         - name: hostpath
           mountPath: /var/log
       volumes:
       - name: hostpath
-        path: /
+        path: /var/log
