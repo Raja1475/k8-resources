@@ -57,5 +57,5 @@ spec:
       
       volumes:
       - name: nginx-volume
-          persistentVolumeClaim:
-            claimName: static-pvc
+        persistentVolumeClaim:
+          claimName: static-pvc
