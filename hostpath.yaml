@@ -25,4 +25,5 @@ spec:
           mountPath: /var/log
       volumes:
       - name: hostpath
-        path: /var/log
+        hostPath:
+          path: /var/log
