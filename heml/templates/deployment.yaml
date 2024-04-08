@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+  labels:
+    app: nginx
+    component: frentend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+      component: frentend
+  template:
+    metadata:
+      labels:
+        app: nginx
+        component: frentend
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+  
