@@ -1,0 +1,3 @@
+deployment:
+  imeageVersion: stable-alpine-slim
+  replicaCount: 3

@@ -6,7 +6,7 @@ metadata:
     app: nginx
     component: frentend
 spec:
-  replicas: 2
+  replicas: {{ .Value.deployment.replicaCount }}
   selector:
     matchLabels:
       app: nginx
@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:latest
+        image: nginx:{{ .Values.deployment.imeageVersion }}
         ports:
         - containerPort: 80
   
