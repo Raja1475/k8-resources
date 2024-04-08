@@ -6,7 +6,7 @@ metadata:
     app: nginx
     component: frentend
 spec:
-  replicas: {{ .Value.deployment.replicaCount }}
+  replicas: {{ .Values.deployment.replicaCount }}
   selector:
     matchLabels:
       app: nginx
